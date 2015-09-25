@@ -39,7 +39,11 @@
 					<span class="challenge">Angular controllers allow you to create properties on the fly try creating an input that is bound using ng-model to controller.somethingOfYourChoice. Then render what you type into the input field by binding it with the double curlies</span>
 					<div class="answer">
 						<!--Your HTML input Here-->
-						{{<!--Your Code Here-->}}
+						<p>In what indistry to want to deal?</p>
+						<input ng-model="controller.industry"/>
+						
+						<div>Your industry of choice: 
+							{{controller.industry}}</div>
 					</div>
 				</li>
 			</ul>
