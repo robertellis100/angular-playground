@@ -1,10 +1,18 @@
 var StoreData = {
     1001:{
         name:"T-Shirt",
-        colors:[{name:"White"},{name:"Blue"},{name:"Green"}, {name:"Black"}],
+        colors:[{name:"Brown"},{name:"Red"},{name:"Green"},{name:"Black"}],
         sizes:["S","M","L","XL"],
         price: 6.79,
         img:"https://www.qwertee.com/images/mens-black.png"
+        // img: function(selection){
+        //   if (selection===undefined){
+        //     return "https://www.qwertee.com/images/mens-black.png";
+        //   }
+        //   return "https://www.qwertee.com/images/mens-"+selection.lowercase()+".png";
+        // }
+        
+        
       },
     1002:{
         name:"Bowling Ball",

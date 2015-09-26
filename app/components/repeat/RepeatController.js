@@ -13,7 +13,7 @@ function RepeatController(){
   };
   //*** No Need to edit anything above this line ****
   
-  this.name = "My BɼokƏn Cart!";
+  this.name = "My BɼokƏn Cart!"+" Is now Fixed! Please, shop at your leisure.";
   
   this.getCartCount = function(){
     //return the length of our cart
@@ -26,15 +26,18 @@ function RepeatController(){
   * this function should return the total cost
   * of each item that is in our cart
   */ 
-  this.calculateCartTotal = function(item, quantity){
-    var totalCost;
+  this.calculateCartTotal = function(){
+    var sumAllItems=0;
     // for (var i =0;i<this.cart.length;i++){
     //   totalCost += (this.cart[i].item.price)*(this.cart[i].item.quantity);
     // }
     this.cart.forEach(function(item){
-      totalCost += (item.price)*(item.quantity);
+      sumAllItems += (item.totalCost());
+      //console.log(item.totalCost());
+      //console.log(sumAllItems);
     })
-    return totalCost;
+    
+    return sumAllItems;
   }// ---> does this new function work?
   
   
@@ -53,8 +56,7 @@ function RepeatController(){
   
   this.addItemToCart = function(item){
       //item gets passed in to this function from the view
-      
-      /*
+            /*
       Our cart demands that items being added to it must have the following properties
       var newItem = {
         name:'',
@@ -70,9 +72,6 @@ function RepeatController(){
       */
       //console.log(item);
       
-      //  <?? How do I get color and size to show up?
-      //back on the html
-      
       var newItem = {
         name:item.name,
         color:item.selectedColor,
@@ -80,12 +79,13 @@ function RepeatController(){
         quantity: 1,
         price:item.price,
         totalCost: function(){
-          return this.quanity*this.price;
+          return this.quantity*this.price;          
         }
-      }
-      ///that doesnt work
+        // img: item.img(this.color)
+      };
       //console.log(item);
       this.cart.push(newItem);
+      //console.log(newItem.totalCost());
   }
   
 }
