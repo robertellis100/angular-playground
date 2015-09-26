@@ -13,7 +13,7 @@ function RepeatController(){
   };
   //*** No Need to edit anything above this line ****
   
-  this.name = "My BɼokƏn Cart!"+" Is now Fixed! Please, shop at your leisure.";
+  this.name = "My BɼokƏn Cart!"+" Is now Fixed! Shop at your leisure.";
   
   this.getCartCount = function(){
     //return the length of our cart
@@ -38,7 +38,17 @@ function RepeatController(){
     })
     
     return sumAllItems;
-  }// ---> does this new function work?
+  };// ---> does this new function work?
+  
+  this.imageChange=function(item){
+    if(this.item.imgSet.id==this.item.selectedColor){
+      this.item.img=this.item.imgSet.img;
+      return this.item.img;
+    }
+    else{
+      return this.item.img;
+    }
+  };
   
   
   this.removeItemFromCart = function(item){

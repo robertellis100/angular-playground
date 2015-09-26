@@ -72,10 +72,13 @@
           <!--HElP out the view to make the price of the item display as currency by using a filter-->
           <p class="item-price">{{item.price | currency}}</p>
           <p class="item-name">{{item.name}}</p>
-          <img ng-src="{{item.img}}">
-          <p>
+          <div class="div-bottom">
+          <img class="img-item" ng-src="{{item.img}}"><div class="div-overlay"><img class="img-overlay" src="https://boisecodeworks.com/assets/img/learn-to-code.gif">
+          </div></div>
+          <p> 
+            <!--{{imageChange(item.selectedColor)}} || -->
             <select ng-model="item.selectedColor" ng-options="color.name as color.name for color in item.colors">
-              <option value=''>--Color--</option>
+              <option value=''>--Color--</option> 
             </select>
             <select ng-model="item.selectedSize">
               <option value=''>--Size--</option>
