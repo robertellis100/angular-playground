@@ -1,11 +1,11 @@
 var StoreData = {
     1001:{
         name:"T-Shirt",
-        colors:[{name:"Brown"},{name:"Red"},{name:"Green"},{name:"Black"}],
+        colors:[{name:"Brown"},{name:"Red"},{name:"Green"},{name:"Black"},{name:"White"}],
         sizes:["S","M","L","XL"],
         price: 9.79,
         img:"https://www.qwertee.com/images/mens-black.png",
-        imgSet:[{id:"Brown",img:"https://www.qwertee.com/images/mens-brown.png"},{id:"Red", img: "https://www.qwertee.com/images/mens-red.png"},{id:"Green", img: "https://www.qwertee.com/images/mens-green.png"},{id:"Black", img: "https://www.qwertee.com/images/mens-black.png"}],
+        imgSet:[{id:"Brown",img:"https://www.qwertee.com/images/mens-brown.png"},{id:"Red", img: "https://www.qwertee.com/images/mens-red.png"},{id:"Green", img: "https://www.qwertee.com/images/mens-green.png"},{id:"Black", img: "https://www.qwertee.com/images/mens-black.png"},{id:"White", img: "https://www.qwertee.com/images/mens-white.png"}],
         
         // img: function(selection){
         //   if (selection===undefined){
